@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Corpus Christi Times - Digital Edition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      window.onload = function() {
+        document.getElementById('date').textContent = new Date().toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+      };
+    </script>
+</head>
+<body class="newspaper">
+    <div class="back-btn" onclick="window.location='page2.html'" title="Go to Page 2">
+        &larr; Next Page
+    </div>
+    <div class="paper-frame">
+        <header class="paper-header">
+            <div class="paper-title">
+                <div class="edition">Final Edition</div>
+                <h1>The Corpus Christi Times</h1>
+                <div class="date" id="date"></div>
+            </div>
+            <div class="subtitle">Member: Audit Bureau of Circulations</div>
+        </header>
+        <main>
+            <div class="headline-banner clickable-area" onclick="window.open('https://en.wikipedia.org/wiki/Fair_Labor_Standards_Act_of_1938','_blank')" title="Read about the Wage-Hour Act">
+                WAGE-HOUR ACT COMPROMISED
+            </div>
+            <div class="main-layout">
+                <section class="sidebar left">
+                    <img src="https://placehold.co/120x140" usemap="#lookoutmap" alt="Lookout Media" class="news-media">
+                    <map name="lookoutmap">
+                        <area shape="rect" coords="0,0,120,140" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" alt="Watch Lookout Video" title="Watch Lookout Video">
+                    </map>
+                    <div class="column-title">LOOKOUT BELOW</div>
+                    <p>
+                        Local news, special columns, and features.<br>
+                        <span class="map-word" data-link="https://en.wikipedia.org/wiki/Weather">The Weather</span>
+                    </p>
+                </section>
+                <section class="main-news">
+                    <div class="row">
+                        <div class="story story-blue clickable-area" onclick="window.open('https://en.wikipedia.org/wiki/Canton_Operation','_blank')" title="Read about Canton">
+                            Death Toll of Canton Raised By New Raids
+                        </div>
+                        <div class="story story-blue clickable-area" onclick="window.open('https://en.wikipedia.org/wiki/United_States','_blank')" title="U.S. Protests Japanese Bombing">
+                            United States Protests Japanese Bombing
+                        </div>
+                        <div class="story story-blue clickable-area" onclick="window.open('https://en.wikipedia.org/wiki/Minimum_wage','_blank')" title="Minimum Wage Law">
+                            Minimum of 25 Cents Is Set In First Year
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="story main-center">
+                            <img src="https://placehold.co/200x200" usemap="#mainmediacenter" alt="Victory Smile" class="news-media">
+                            <map name="mainmediacenter">
+                                <area shape="rect" coords="0,0,200,200" href="https://en.wikipedia.org/wiki/Victory" alt="Victory Feature" title="Victory Feature">
+                            </map>
+                            <div class="story-title">Victory Smile</div>
+                            <p>
+                                Special Feature: Celebration in the city.<br>
+                                <span class="map-word" data-link="https://en.wikipedia.org/wiki/Festival">Festival</span> highlights and interviews.
+                            </p>
+                        </div>
+                        <div class="story main-side clickable-area" onclick="window.open('https://en.wikipedia.org/wiki/Bank_robbery','_blank')" title="Read about the Bank Robbery">
+                            Bandits Take $20,000 in Bank Robbery
+                        </div>
+                        <div class="story main-side clickable-area" onclick="window.open('https://en.wikipedia.org/wiki/Community_chest','_blank')" title="Community Chest Campaign">
+                            Cawker Is Named Chairman of Community Chest Campaign
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="story map-area clickable-area" onclick="window.open('https://en.wikipedia.org/wiki/Bombing_of_Canton','_blank')" title="Canton a Helpless War Target">
+                            <img src="https://placehold.co/150x100" alt="Canton War Map" class="news-media-small">
+                        </div>
+                        <div class="story column-story">
+                            <span class="map-word" data-link="https://en.wikipedia.org/wiki/Oil_well">Submerged Well To Be Tested Soon</span>
+                            <br>
+                            Would Be First Oil Field Under Water For This Sector.
+                        </div>
+                    </div>
+                </section>
+                <section class="sidebar right">
+                    <div class="story story-pink clickable-area" onclick="window.open('https://en.wikipedia.org/wiki/Minimum_wage','_blank')" title="Minimum Wage Law">
+                        Minimum of 25 Cents Is Set In First Year
+                    </div>
+                    <div class="story story-pink clickable-area" onclick="window.open('https://en.wikipedia.org/wiki/Police_officer','_blank')" title="Police News">
+                        Traffic Policeman, Hurt in Mishap, in Critical Condition
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            &copy; 2025 Corpus Christi Times (Digital Edition)
+        </footer>
+    </div>
+    <script>
+      // Clickable text links
+      document.querySelectorAll('.map-word').forEach(function(el) {
+        el.style.textDecoration = "underline";
+        el.style.cursor = "pointer";
+        el.onclick = function() { window.open(el.dataset.link, '_blank'); };
+      });
+    </script>
+</body>
+</html>

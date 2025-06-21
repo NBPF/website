@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Gazette - Page 2</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="second-page">
+    <div class="back-btn" onclick="window.location='index.html'" title="Back to Front Page">
+        &larr; Back
+    </div>
+    <header>
+        <h1>Features &amp; Interviews</h1>
+    </header>
+    <main>
+        <section class="feature">
+            <img src="https://placehold.co/400x250" usemap="#featuremap" alt="Interview Feature" class="feature-image">
+            <map name="featuremap">
+                <area shape="circle" coords="100,125,80" href="https://en.wikipedia.org/wiki/Journalist" alt="Journalist" title="Journalist Profile">
+                <area shape="rect" coords="220,10,390,240" href="https://en.wikipedia.org/wiki/Interview" alt="Interview" title="Read Interview">
+            </map>
+            <h2>Exclusive Interview</h2>
+            <p>
+                We sat down with the renowned journalist <span class="map-word" data-link="https://en.wikipedia.org/wiki/Ada_Lovelace">Ada Lovelace</span> to discuss her views on technology in media.
+            </p>
+        </section>
+        <section class="column">
+            <h3>Community Voices</h3>
+            <p>
+                Residents discuss their favorite summer memories. Read more by clicking <span class="map-word" data-link="https://en.wikipedia.org/wiki/Community">here</span>.
+            </p>
+        </section>
+    </main>
+    <footer>
+        &copy; 2025 Monthly Gazette - Page 2
+    </footer>
+    <script>
+      // Make certain words clickable (simulate image map for text)
+      document.querySelectorAll('.map-word').forEach(function(el) {
+        el.style.textDecoration = "underline";
+        el.style.cursor = "pointer";
+        el.onclick = function() { window.open(el.dataset.link, '_blank'); };
+      });
+    </script>
+</body>
+</html>
